@@ -1,0 +1,10 @@
+export { default as Splash1 } from "./Splash1.jpg";
+export { default as Splash2 } from "./Splash2.jpg";
+export { default as Splash3 } from "./Splash3.jpg";
+export { default as Splash4 } from "./Splash4.jpg";
+export { default as SignInSplash } from "./SignIn.jpg";
+export { default as SignUpSplash } from "./SignUp.jpg";
+export { default as Fogo } from "./Fogo.jpg";
+export { default as MamaOliech } from "./MamaOliech.jpg";
+export { default as Chinese } from "./Chinese.jpg";
+export { default as ProfilePic } from "./man.png";

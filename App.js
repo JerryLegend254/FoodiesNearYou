@@ -1,20 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState, useEffect} from "react";
+import { StatusBar } from "expo-status-bar";
+import Navigation from "./navigation/Navigation";
+import { Asset } from "expo-asset";
+import AppLoading from "expo-app-loading";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+
+
+function useImages(images) {
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    Asset.loadAsync(images)
+      .then(() => setLoaded(true))
+      .catch(setError);
+  }, []);
+
+  return [loaded, error];
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default function App() {
+  const [imagesLoaded] = useImages([
+    require("./assets/Splash1.jpg"),
+    require("./assets/Splash2.jpg"),
+    require("./assets/Splash3.jpg"),
+    require("./assets/Splash4.jpg"),
+    require("./assets/man.png"),
+  ]);
+
+  if (!imagesLoaded) {
+    return <AppLoading />;
+  }
+  
+  return <><Navigation /></>;
+}
