@@ -33,7 +33,7 @@ const SplashScreen4 = ({navigation}) => {
             FOODIES NEAR YOU
           </Text>
         </View>
-        <TouchableOpacity className="absolute bottom-20 items-center justify-center bg-[#311E07] w-1/2 p-2 opacity-80 rounded-lg" onPress={() => navigation.navigate("HomeScreen")}>
+        <TouchableOpacity className="absolute bottom-20 items-center justify-center bg-[#311E07] w-2/3 p-2 opacity-80 rounded-lg" onPress={() => navigation.navigate("HomeScreen")}>
           <View>
             <Text className="text-white font-bold text-3xl">GET STARTED</Text>
           </View>

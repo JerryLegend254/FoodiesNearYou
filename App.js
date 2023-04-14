@@ -26,6 +26,9 @@ export default function App() {
     require("./assets/Splash3.jpg"),
     require("./assets/Splash4.jpg"),
     require("./assets/man.png"),
+    require("./assets/MamaOliech.jpg"),
+    require("./assets/Chinese.jpg"),
+    require("./assets/Fogo.jpg"),
   ]);
 
   if (!imagesLoaded) {
